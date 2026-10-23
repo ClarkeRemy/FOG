@@ -4,18 +4,18 @@ push(V, L0, L1) :- [V | L0] = L1.
 
 tree_flat_rec(l, ACC, ACC).
 tree_flat_rec(n(L,V,R), ACC, OUT) :-  
-    tree_flat_rec(R, ACC, RO), 
-    push(V,      RO,  RO_),
+    tree_flat_rec(R, ACC, RO ),
+    push(V,          RO,  RO_),
     tree_flat_rec(L, RO_, OUT).
 
 
 tree_flat_dcg(l)     --> [] .
-tree_flat_(n(L,V,R)) -->  
+tree_flat_dcg(n(L,V,R)) -->  
     tree_flat_dcg(R), 
     push(V),
     tree_flat_dcg(L).
 
-
+tree_flat_mut_rec(T, OUT) :- loop_tree_flat(T, [], done, OUT ).
 % as mutually recursive loop/tailcalls
 loop_tree_flat(l       , ACC, CONT, OUT) :- apply_cont(CONT, ACC, OUT).
 loop_tree_flat(n(L,V,R), ACC, CONT, OUT) :- loop_tree_flat(R, ACC, do_left(L,V, CONT), OUT).
