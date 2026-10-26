@@ -1,0 +1,18 @@
+Part 4: The Tree Being "Consumed" — Visual Summary
+
+Step 1:  [🟨⬜⬜⬜⬜⬜⬜]  → current: node4
+Step 2:  [🔄🟨⬜⬜⬜⬜⬜]  → current: node2
+Step 3:  [🔄🔄🟨⬜⬜⬜⬜]  → current: node1
+Step 4:  [🔄🔄🔄🟨⬜⬜⬜]  → current: leaf (l of 1)
+Step 5:  [🔄🔄✅✅🟨⬜⬜]  → current: leaf (r of 1)
+Step 6:  [🔄✅✅✅🟨⬜⬜]  → current: node3
+Step 7:  [🔄✅✅✅✅🟨⬜]  → current: leaf (l of 3)
+Step 8:  [🔄✅✅✅✅✅🟨]  → current: leaf (r of 3)
+Step 9:  [🔄✅✅✅✅✅✅]  → current: node6
+Step 10: [🔄✅✅✅✅✅✅]  → current: node5
+Step 11: [🔄✅✅✅✅✅✅]  → current: leaf (l of 5)
+Step 12: [🔄✅✅✅✅✅✅]  → current: leaf (r of 5)
+Step 13: [🔄✅✅✅✅✅✅]  → current: node7
+Step 14: [🔄✅✅✅✅✅✅]  → current: leaf (l of 7)
+Step 15: [🔄✅✅✅✅✅✅]  → current: leaf (r of 7)
+End:     [✅✅✅✅✅✅✅]  → all done
