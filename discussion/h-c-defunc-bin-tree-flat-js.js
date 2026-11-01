@@ -22,7 +22,7 @@ const CONT = Object.freeze({
 // factory function make done
 function makeDone() {
     return { tag: CONT.DONE };
-}
+  }
 
 //factory for the "DoRight" continuation
 function makeDoRight(v, r, cont) {
