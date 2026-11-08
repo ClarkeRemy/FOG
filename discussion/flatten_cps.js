@@ -47,7 +47,7 @@ function flatten_cps(t, acc, cont) {
     switch (t.tag) {
         case Tree_Tag.L:
             //Base case: call the continuation with the accumulator
-            return cont(acc);
+            return cont(acc);   k2, k3, k4
 
         case Tree_Tag.N:
             //Recursive case: create a new closure and pass it to the left child
@@ -58,10 +58,10 @@ function flatten_cps(t, acc, cont) {
                  * @param {number[]} left
                  * @returns {number[]}
                  */
-                function (left) {
-                    left.push(t.v);
+                function (left) {   
+                    left.push(t.v);   // [1,2]
                     return flatten_cps(t.r, left, cont);
-                }
+                }                          //[1,2]   k4
             );
     }
 }
