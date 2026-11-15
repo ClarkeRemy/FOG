@@ -62,12 +62,26 @@ function flatten_cps_named_do_right(v, r, cont) {  // this function captures v, 
      * @param {number[]} left
      * @returns {number[]}
      */
+     
     function do_right_continuation(left) {
-        left.push(v);
+        left.push(v); // [1]
         return flatten_cps_named(r, left, cont);
     }
     return do_right_continuation;
 }
+
+// outer function(){
+//     x =1;
+//   inner  function(){
+//         x++;
+//     }
+
+//     return inner;
+// }
+
+// const myClosure = outer;
+
+// myClosure();
 
 // name cps core function
 

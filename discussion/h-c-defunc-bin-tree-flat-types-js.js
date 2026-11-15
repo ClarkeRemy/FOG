@@ -83,10 +83,12 @@ function makeDoRight(v, r, cont) {
  */
 
 //apply - interprets a continuation
+// [f, d, arg]
+// function apply(c) {return c[0](c[1], c[2])}
 function apply(c) {
     return function (arg) {
         switch (c.tag) {
-            case Cont_tag.DONE:
+            case Cont_tag.DONE:  
                 return arg;
 
             case Cont_tag.DoRight:
